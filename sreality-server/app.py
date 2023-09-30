@@ -4,14 +4,6 @@ from config import DB_CONFIG
 
 app = Flask(__name__)
 
-# db_config = {
-#     'dbname': 'sreality',
-#     'user': 'adam',
-#     'password': '123456',
-#     'host': 'database',
-#     'port': '5432'
-# }
-
 @app.route('/')
 def index():
     try:
