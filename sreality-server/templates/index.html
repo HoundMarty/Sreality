@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sreality</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        {% for title, image_url in images %}
+            <div class="grid-item">
+                <img src="{{ image_url }}" alt="{{ title }}">
+                <h2>{{ title }}</h2>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
